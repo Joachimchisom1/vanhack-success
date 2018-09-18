@@ -12,11 +12,11 @@ class SuccessListTable extends Component {
             <div>
              <BootstrapTable data={ successData } pagination={ true }>
                 <TableHeaderColumn dataField='id' isKey>ID</TableHeaderColumn>
-                <TableHeaderColumn dataField='name'>Name</TableHeaderColumn>
-                <TableHeaderColumn dataField='city'>City</TableHeaderColumn>
-                <TableHeaderColumn dataField='area'>Area</TableHeaderColumn>
-                <TableHeaderColumn dataField='skill'>Skill</TableHeaderColumn>
-                <TableHeaderColumn dataField='year'>Year</TableHeaderColumn>
+                <TableHeaderColumn dataField='Name'>Name</TableHeaderColumn>
+                <TableHeaderColumn dataField='City'>City</TableHeaderColumn>
+                <TableHeaderColumn dataField='Area'>Area</TableHeaderColumn>
+                <TableHeaderColumn dataField='Skill'>Skill</TableHeaderColumn>
+                <TableHeaderColumn dataField='Year'>Year</TableHeaderColumn>
              </BootstrapTable>
             </div>
           );
