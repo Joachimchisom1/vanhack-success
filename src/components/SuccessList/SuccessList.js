@@ -10,14 +10,14 @@ class SuccessListTable extends Component {
 
     return (
      <div>
-      <BootstrapTable data={ successData } striped={true} hover={true} pagination={ true }>
-        <TableHeaderColumn dataField='Id' isKey dataAlign="center" dataSort={true}>ID</TableHeaderColumn>
-        <TableHeaderColumn dataField='Name' dataAlign="center" dataSort={true}>Name</TableHeaderColumn>
-        <TableHeaderColumn dataField='City' dataAlign="center" dataSort={true}>City</TableHeaderColumn>
-        <TableHeaderColumn dataField='Area' dataAlign="center" dataSort={true}>Area</TableHeaderColumn>
-        <TableHeaderColumn dataField='Skill' dataAlign="center" dataSort={true}>Skill</TableHeaderColumn>
-        <TableHeaderColumn dataField='Year' dataAlign="center" dataSort={true}>Year</TableHeaderColumn>
-      </BootstrapTable>
+         <BootstrapTable data={ successData } striped={true} hover={true}    pagination={ true } >
+            <TableHeaderColumn dataField='Id' isKey dataAlign="center" >ID</TableHeaderColumn>
+            <TableHeaderColumn dataField='Name' dataAlign="center" >Name</TableHeaderColumn>
+            <TableHeaderColumn dataField='City' dataAlign="center" >City</TableHeaderColumn>
+            <TableHeaderColumn dataField='Area' dataAlign="center" >Area</TableHeaderColumn>
+            <TableHeaderColumn dataField='Skill' dataAlign="center" >Skill</TableHeaderColumn>
+            <TableHeaderColumn dataField='Year' dataAlign="center" >Year</TableHeaderColumn>
+         </BootstrapTable>
      </div>
           );
         }
