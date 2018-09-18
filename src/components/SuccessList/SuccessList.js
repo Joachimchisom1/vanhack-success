@@ -6,19 +6,19 @@ import successData from '../../assets/success-cases';
 
 class SuccessListTable extends Component {
 
-        render() {
+  render() {
 
-          return (
-            <div>
-             <BootstrapTable data={ successData } pagination={ true }>
-                <TableHeaderColumn dataField='Id' isKey>ID</TableHeaderColumn>
-                <TableHeaderColumn dataField='Name'>Name</TableHeaderColumn>
-                <TableHeaderColumn dataField='City'>City</TableHeaderColumn>
-                <TableHeaderColumn dataField='Area'>Area</TableHeaderColumn>
-                <TableHeaderColumn dataField='Skill'>Skill</TableHeaderColumn>
-                <TableHeaderColumn dataField='Year'>Year</TableHeaderColumn>
-             </BootstrapTable>
-            </div>
+    return (
+     <div>
+      <BootstrapTable data={ successData } striped={true} hover={true} pagination={ true }>
+        <TableHeaderColumn dataField='Id' isKey dataAlign="center" dataSort={true}>ID</TableHeaderColumn>
+        <TableHeaderColumn dataField='Name' dataAlign="center" dataSort={true}>Name</TableHeaderColumn>
+        <TableHeaderColumn dataField='City' dataAlign="center" dataSort={true}>City</TableHeaderColumn>
+        <TableHeaderColumn dataField='Area' dataAlign="center" dataSort={true}>Area</TableHeaderColumn>
+        <TableHeaderColumn dataField='Skill' dataAlign="center" dataSort={true}>Skill</TableHeaderColumn>
+        <TableHeaderColumn dataField='Year' dataAlign="center" dataSort={true}>Year</TableHeaderColumn>
+      </BootstrapTable>
+     </div>
           );
         }
       }
