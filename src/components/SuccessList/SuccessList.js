@@ -11,7 +11,7 @@ class SuccessListTable extends Component {
           return (
             <div>
              <BootstrapTable data={ successData } pagination={ true }>
-                <TableHeaderColumn dataField='id' isKey>ID</TableHeaderColumn>
+                <TableHeaderColumn dataField='Id' isKey>ID</TableHeaderColumn>
                 <TableHeaderColumn dataField='Name'>Name</TableHeaderColumn>
                 <TableHeaderColumn dataField='City'>City</TableHeaderColumn>
                 <TableHeaderColumn dataField='Area'>Area</TableHeaderColumn>
