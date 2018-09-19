@@ -4,11 +4,10 @@ import Dashboard from '../components/Dashboard/Dashboard';
 import SuccessListTable from "../components/SuccessList/SuccessList";
 const Main = () => {
     return (
-        <Switch>
-            <Route exact path="/" component={Dashboard}/>
+        <main>
             <Route exact path="/list" component={SuccessListTable}/>
-            <Route component={Dashboard}/>
-        </Switch>
+            <Route exact path="/" component={Dashboard}/>
+        </main>
     )
 }
 export default Main;

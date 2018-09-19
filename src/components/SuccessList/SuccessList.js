@@ -40,5 +40,4 @@ class SuccessListTable extends Component {
   }
 }
 
-    
-  export default SuccessListTable;
+export default SuccessListTable;
