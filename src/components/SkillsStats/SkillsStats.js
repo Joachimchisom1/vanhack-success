@@ -10,10 +10,11 @@ export class SkillsChart extends Component {
     componentDidMount() {
         const skillsChart = underscore.groupBy(successData, 'Skill');
         const skills = Object.keys(skillsChart);
-        const statsData = skills.map((skill) => ({
+        let statsData = skills.map((skill) => ({
             name: skill || "Others",
             Hires: skillsChart[skill].length
         }));
+        statsData = underscore.sortBy(statsData,'Hires').reverse();
         this.setState({ statsData});
     }
     onPieClick = (data) => {

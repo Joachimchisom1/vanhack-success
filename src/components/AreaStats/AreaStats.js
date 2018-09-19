@@ -16,13 +16,14 @@ export class AreaStats extends Component {
         const areasData = underscore.groupBy(successData, 'Area');
         const areas = Object.keys(areasData);
         const colors = [];
-        const statsData = areas.map((area) => {
+        let statsData = areas.map((area) => {
             colors.push(getRandomColor());
             return ({
                 name: area || "Others",
                 Hires: areasData[area].length
             })
         });
+        statsData = underscore.sortBy(statsData,'Hires').reverse();
         this.setState({ statsData, colors});
     }
     onPieEnter=(data, index) => {
