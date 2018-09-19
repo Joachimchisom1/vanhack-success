@@ -19,28 +19,35 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+    .left-side {
+      width: 55%;
+    }
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 }
 .flex-column-center {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid #333;
+  margin-bottom: 30px;
 }
-.year-container {
-  width: 60%;
-  padding-top: 20px;
+.year-container, .skills-container {
+  
+    .recharts-surface {
+      overflow: visible;
+    }
 }
 .area-container, .city-container {
   width: 50%;
   padding-top: 20px;
 }
 .total-hires-container {
-  width: 38%;
-  justify-content: center;
-  margin-left: 20px;
-  &:hover {
-    background-color: #e1e1e1;
-    cursor: pointer;
-  }
+  margin-bottom: 50px;
 }
 .total-number {
   font-weight: 500;

@@ -6,6 +6,7 @@ import { fillEmptyData } from '../../utils/fill-empty-data';
 
 
 class SuccessListTable extends Component {
+
   state = {
     isLoading: false,
     parsedData:[]
@@ -20,7 +21,7 @@ class SuccessListTable extends Component {
       <div>
         {
          this.state.isLoading &&
-          <BootstrapTable data={ this.state.parsedData } striped={true} hover={true} pagination={ true } >
+          <BootstrapTable data={ this.state.parsedData } striped={true} hover={true} pagination={ false }>
             <TableHeaderColumn dataField='Id' isKey dataAlign="center"
               filter={ { type: 'TextFilter', delay: 1000 } }  >ID</TableHeaderColumn>
             <TableHeaderColumn dataField='Name' filter={ { type: 'TextFilter', delay: 1000 } } 

@@ -7,7 +7,7 @@ import renderActiveShape from '../helpers/renderActiveShape';
 
 export class AreaStats extends Component {
     state = {
-        statsData:undefined,
+        statsData:[],
         activeIndex: 0,
         colors: []
     } 
@@ -42,7 +42,7 @@ export class AreaStats extends Component {
         return (
             <div className="flex-column-center area-container">
                 {statsData && 
-                    <PieChart width={700} height={450}>
+                    <PieChart width={700} height={400}>
                     <Pie data={statsData} cx="350" cy="200" dataKey="Hires" outerRadius={150} innerRadius={100}
                     onMouseEnter={this.onPieEnter} 
                     activeIndex={activeIndex}
@@ -57,7 +57,7 @@ export class AreaStats extends Component {
                     <Tooltip/>
                   </PieChart>
                 }
-                <h3>Hires by Areas</h3>
+                <h3>Hires Per Area</h3>
                 
             </div>
         )

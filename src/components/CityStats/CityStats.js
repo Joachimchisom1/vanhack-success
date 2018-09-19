@@ -40,7 +40,7 @@ export class CityStats extends Component {
         return (
             <div className="flex-column-center city-container">
                 {statsData && 
-                    <PieChart width={700} height={450}>
+                    <PieChart width={700} height={400}>
                     <Pie data={statsData} cx="350" cy="200" dataKey="Hires" outerRadius={150} innerRadius={100}
                     onMouseEnter={this.onPieEnter} 
                     activeIndex={activeIndex}
@@ -55,8 +55,7 @@ export class CityStats extends Component {
                     <Tooltip/>
                   </PieChart>
                 }
-                <h3>Hires by City</h3>
-                
+                <h3>Hires Per City</h3>   
             </div>
         )
     }

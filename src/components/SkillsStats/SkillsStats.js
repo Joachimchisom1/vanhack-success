@@ -5,7 +5,7 @@ import { BarChart, XAxis, YAxis, Tooltip, Bar} from 'recharts';
 
 export class SkillsChart extends Component {
     state = {
-        statsData:undefined
+        statsData:[]
     } 
     componentDidMount() {
         const skillsChart = underscore.groupBy(successData, 'Skill');
@@ -24,16 +24,15 @@ export class SkillsChart extends Component {
     render() {
         return (
             <div className="flex-column-center skills-container">
-               
                 {this.state.statsData && 
-                     <BarChart width={1300} height={500} data={this.state.statsData} >
-                        <XAxis dataKey="name" />
-                        <YAxis />
+                     <BarChart width={500} height={1500} data={this.state.statsData} layout="vertical">
+                        <XAxis  type="number" orientation = "top"/>
+                        <YAxis type="category" dataKey="name"/>
                         <Tooltip />
-                        <Bar dataKey="Hires" fill="#2E4053" />
+                        <Bar dataKey="Hires" fill="#2E4053" label={{ position: 'right' }}/>
                     </BarChart>
                 }
-                
+                <h3>Hires Per Skill</h3>
             </div>
         )
     }
